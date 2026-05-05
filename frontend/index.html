@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online napló - Belépés</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Online napló</h1>
+    <p class="subtitle">Privát jegyzetek egyszerűen</p>
+
+    <section class="card">
+      <h2>Belépés / Regisztráció</h2>
+
+      <input type="text" id="username" placeholder="Felhasználónév" />
+      <input type="password" id="password" placeholder="Jelszó" />
+
+      <div class="button-row">
+        <button onclick="register()">Regisztráció</button>
+        <button onclick="login()">Belépés</button>
+      </div>
+
+      <p id="auth-message"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

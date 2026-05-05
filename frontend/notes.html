@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online napló - Jegyzetek</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="top-row">
+      <div>
+        <h1>Jegyzeteim</h1>
+        <p class="subtitle">Itt kezelheted a saját privát jegyzeteidet</p>
+      </div>
+      <button class="logout" onclick="logout()">Kilépés</button>
+    </div>
+
+    <section class="card">
+      <h2>Új jegyzet</h2>
+
+      <input type="text" id="note-title" placeholder="Jegyzet címe" />
+      <textarea id="note-content" placeholder="Jegyzet tartalma"></textarea>
+      <input type="text" id="note-category" placeholder="Kategória (opcionális)" />
+
+      <button onclick="createNote()">Jegyzet mentése</button>
+    </section>
+
+    <section class="card">
+      <h2>Mentett jegyzetek</h2>
+      <div id="notes-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
