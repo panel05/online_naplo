@@ -8,8 +8,14 @@ if (currentPage.includes("notes.html") && !token) {
   window.location.href = "index.html";
 }
 
-// Ha már be vagyunk jelentkezve és a login oldalon vagyunk, átdob a jegyzetekhez
-if ((currentPage.includes("index.html") || currentPage.endsWith("/")) && token) {
+// Ha már be vagyunk jelentkezve és a belépés/regisztráció oldalon vagyunk,
+// akkor automatikusan átdob a jegyzetek oldalra
+if (
+  (currentPage.includes("index.html") ||
+    currentPage.includes("register.html") ||
+    currentPage.endsWith("/")) &&
+  token
+) {
   window.location.href = "notes.html";
 }
 
@@ -31,7 +37,11 @@ async function register() {
     authMessage.textContent = data.message;
 
     if (response.ok) {
-      authMessage.textContent = "Sikeres regisztráció, most már be tudsz lépni.";
+      authMessage.textContent = "Sikeres regisztráció, átirányítás a belépéshez...";
+
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 5000);
     }
   } catch (error) {
     authMessage.textContent = "Nem sikerült kapcsolódni a szerverhez.";
@@ -215,6 +225,7 @@ async function deleteNote(id) {
   }
 }
 
+// Ha a notes.html oldalon vagyunk, automatikusan betölti a jegyzeteket
 if (currentPage.includes("notes.html")) {
   getNotes();
 }

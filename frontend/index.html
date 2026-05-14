@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Online napló - Belépés</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Online napló</title>
 </head>
 <body>
   <main class="container">
@@ -12,20 +12,20 @@
     <p class="subtitle">Privát jegyzetek egyszerűen</p>
 
     <section class="card">
-      <h2>Belépés / Regisztráció</h2>
+      <h2>Belépés</h2>
 
-      <input type="text" id="username" placeholder="Felhasználónév" />
-      <input type="password" id="password" placeholder="Jelszó" />
+      <input type="text" id="username" placeholder="Felhasználónév">
+      <input type="password" id="password" placeholder="Jelszó">
 
-      <div class="button-row">
-        <button onclick="register()">Regisztráció</button>
-        <button onclick="login()">Belépés</button>
-      </div>
+      <button type="button" onclick="login()">Belépés</button>
 
-      <p id="auth-message"></p>
+      <p id="auth.message"></p>
+      <p class="switch-text">
+        Még nincs fiókod?
+        <a href="register.html">Regisztráció</a>
+      </p>
     </section>
   </main>
-
   <script src="app.js"></script>
 </body>
 </html>

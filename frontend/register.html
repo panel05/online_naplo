@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Online napló | Regisztráció</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Online napló</h1>
+        <p class="subtitle">Privát jegyzetek egyszerűen</p>
+
+        <section class="card">
+            <h2>Regisztráció</h2>
+            <input type="text" id="username" placeholder="Felhasználónév">
+            <input type="password" id="password" placeholder="Jelszó">
+
+            <button type="button" onclick="register()">Regisztráció</button>
+            <p id="auth-message"></p>
+
+            <p class="password-help">
+                A jelszónak legalább 8 karakter hosszúnak kell lennie. és tartalmaznia kell kisbetűt, nagybetűt, számot és speciális karaktert.
+            </p>
+            <p class="switch-text">
+                Már van fiókod?
+                <a href="index.html">Belépés</a>
+            </p>
+        </section>
+    </main>
+    <script src="app.js"></script>    
+</body>
+</html>
